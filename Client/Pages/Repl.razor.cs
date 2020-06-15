@@ -33,8 +33,6 @@
         [Parameter]
         public int? DemoId { get; set; }
 
-        private DotNetObjectReference<Repl> DotNetInstance { get; set; }
-
         public string DemoCode { get; set; }
 
         public CodeEditor CodeEditor { get; set; }
@@ -52,6 +50,8 @@
         public bool Loading { get; set; }
 
         public int UserComponentCodeStartLine => this.UserComponentCodePrefix.Count(ch => ch == '\n');
+
+        private DotNetObjectReference<Repl> DotNetInstance { get; set; }
 
         public async Task UpdateLoaderText(string loaderText)
         {
