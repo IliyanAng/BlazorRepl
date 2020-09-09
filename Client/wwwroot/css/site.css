@@ -45,6 +45,18 @@ app {
             text-overflow: ellipsis;
         }
 
+.blazor-logo {
+    width: 49px;
+    padding-right: 10px;
+    display: flex;
+    padding-bottom: 4px;
+    align-self: center;
+}
+
+.blazor-logo-wrapper {
+    display: flex;
+}
+
 .navbar-brand {
     color: #6c757d;
 }
@@ -81,6 +93,10 @@ app {
     color: red;
 }
 
+.save-icon {
+    font-size: 14px;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -101,7 +117,7 @@ app {
     }
 
 /* Error List */
-.main .toast {
+.main .error-list {
     max-width: 100%;
     width: 97%;
     position: fixed;
@@ -230,6 +246,12 @@ app {
     background-color: #FFF;
 }
 
+.code-editor {
+    height: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -290,4 +312,139 @@ app {
     .user-page-loader {
         left: 46%;
     }
+}
+
+/* Save Snippet Popup */
+.save-snippets-popup {
+    position: absolute;
+    top: 55px;
+    left: 125px;
+    width: 340px;
+    height: 200px;
+    z-index: 100;
+    padding: 5px 20px;
+    overflow: visible;
+}
+
+.snippet-save-warnings li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 5px;
+    margin-left: 10px;
+}
+
+    .snippet-save-warnings li:before {
+        content: "\25BA \0020";
+        font-size: 6px;
+        position: absolute;
+        top: 5px;
+        left: -10px;
+    }
+
+.snippet-link-disclaimer {
+    font-size: 0.8em;
+    margin-bottom: 8px;
+}
+
+.save-snippet-loader {
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.save-snippet-callout {
+    margin-left: -6px;
+    top: -12px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    pointer-events: none;
+}
+
+.snippet-link-wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
+    .snippet-link-wrapper input[readonly] {
+        background-color: #fff;
+    }
+
+/* Heading section of pages */
+#unapp-page .video-hero {
+    background-image: url(../img/code-editor.jpg);
+    background-size: auto;
+    background-position: top center;
+}
+
+    #unapp-page .video-hero.index-page {
+        height: 700px;
+    }
+
+    #unapp-page .video-hero.getting-started-page {
+        height: 500px;
+    }
+
+/* Page Notifications */
+.page-notifications-container {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    width: 400px;
+}
+
+/* Tabs Manager */
+.nav-tabs > li {
+    height: 40px;
+}
+
+#new-tab-input {
+    height: 27px;
+    width: 160px;
+}
+
+.tabs-wrapper .tab {
+    cursor: pointer;
+}
+
+.tab-name {
+    display: flex;
+    padding: 3px 10px;
+    height: 100%;
+}
+
+.tab-input {
+    padding: 5px 10px;
+}
+
+.tab-name-wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 5px;
+}
+
+.close-tab {
+    width: 16px;
+    height: 16px;
+    line-height: initial;
+    padding-left: 3.5px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+    .close-tab:hover {
+        background-color: #BBB;
+    }
+
+.new-tab-button {
+    cursor: pointer;
 }

@@ -2,16 +2,13 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.CodeAnalysis;
 
-    public class CompileToCSharpResult
+    internal class CompileToCSharpResult
     {
         public CompileToCSharpResult()
         {
             this.Diagnostics = Enumerable.Empty<CompilationDiagnostic>();
         }
-
-        public Compilation BaseCompilation { get; set; }
 
         public string Code { get; set; }
 
